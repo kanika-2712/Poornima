@@ -77,6 +77,7 @@ def filter_by_due_date():
 
 def search_tasks():
     query = input("Enter search query: ")
+    print("Enter Either Title or Description")
     response = requests.get(f"{BASE_URL}/tasks/search/?query={query}")
     print("Search Results:", response.json())
 
